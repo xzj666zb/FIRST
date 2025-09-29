@@ -2,7 +2,7 @@ clc; clear; close all;
 
 %% ===================== 1. Basic parameter settings =====================
 folder_path = "D:\new"; % Polarization image folder path
-output_folder = 'D:\研二汇报\524\output'; % Result output folder path
+output_folder = 'D:\524\output'; % Result output folder path
 if ~exist(output_folder, 'dir')
     mkdir(output_folder);
 end
