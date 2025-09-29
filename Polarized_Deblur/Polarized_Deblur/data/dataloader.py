@@ -10,7 +10,7 @@ def compute_stokes_parameters(I_0, I_45, I_90, I_135):
     S0 = (I_0 + I_45 + I_90 + I_135) / 2.0
     S1 = I_0 - I_90
     S2 = I_45 - I_135
-    return torch.stack([S0, S1, S2], dim=0)  # 输出形状 (3, H, W)
+    return torch.stack([S0, S1, S2], dim=0)  # (3, H, W)
 
 class PolarizedImageDataset(Dataset):
     def __init__(self, data_dir, transform=None):
