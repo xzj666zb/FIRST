@@ -7,7 +7,7 @@ longitude_deg = 112.96385;  % Longitude (positive for east longitude)
 L1 = deg2rad(latitude_deg); % Convert latitude to radians (required for astronomical calculations)
 
 % 1.2 Folder path (stores .jpg files with timestamps, filename format: year_month_day_hour_minute_second.jpg)
-folder_path = "D:\水下偏振论文\水下数据集\new";  % Replace with your image folder path
+folder_path = "D:\new";  % Replace with your image folder path
 
 %% ===================== 2. Get and sort image files (by timestamp) =====================
 % Get all .jpg files in the folder
