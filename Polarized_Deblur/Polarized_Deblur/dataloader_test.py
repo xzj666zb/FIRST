@@ -56,7 +56,7 @@ class PolarizedImageDataset(Dataset):
 
         B_blur, S1_blur, S2_blur = compute_stokes_parameters(blur0, blur45, blur90, blur135)
 
-        B_polarized = torch.stack([blur0, blur45, blur90, blur135], dim=0)  # 形状为 (4, 1, H, W)
+        B_polarized = torch.stack([blur0, blur45, blur90, blur135], dim=0)  #  (4, 1, H, W)
 
         sharp_path = os.path.join(self.sharp_folder, filename)
         sharp_image = Image.open(sharp_path).convert('L')
