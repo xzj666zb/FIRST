@@ -8,7 +8,7 @@ Polarized_Deblur/
 ├── models/                 # Model definitions  
 │   ├── unpolarized_estimator.py  # Unpolarized image estimator  
 │   ├── polarized_reconstructor.py  # Polarized image reconstructor  
-│   ├── saved_models/       # Pretrained model  
+│   ├── saved_models/      
 │   └── losses.py           # Loss functions definition  
 │  
 ├── utils/                  # Utility functions  
