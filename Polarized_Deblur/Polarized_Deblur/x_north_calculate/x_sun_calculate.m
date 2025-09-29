@@ -1,7 +1,7 @@
 clc; clear; close all;
 
 %% ===================== 1. Basic parameter settings =====================
-folder_path = "D:\水下偏振论文\水下数据集\new"; % Polarization image folder path
+folder_path = "D:\new"; % Polarization image folder path
 output_folder = 'D:\研二汇报\524\output'; % Result output folder path
 if ~exist(output_folder, 'dir')
     mkdir(output_folder);
