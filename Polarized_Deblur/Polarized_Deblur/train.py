@@ -64,7 +64,6 @@ def validate(estimator, reconstructor, val_loader, stage):
                 loss = loss_fn(I_guide, I_sharp, I_polarized_pred, I_polarized)
                 mse, psnr, ssim_value = calculate_metrics(I_polarized_pred, I_polarized)
 
-            # 数值稳定性检查
             if torch.isnan(loss).any():
                 raise RuntimeError("NaN loss occurs during validation; please check the data or model.")
 
@@ -142,7 +141,7 @@ def train():
                 continue
 
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(estimator.parameters(), max_norm=0.1)  # 严格梯度裁剪
+            torch.nn.utils.clip_grad_norm_(estimator.parameters(), max_norm=0.1)  
             opt_estimator.step()
             train_loss += loss.item()
 
