@@ -19,7 +19,7 @@ class PolarizedImageDataset(Dataset):
         self.blur_folder = os.path.join(data_dir, 'blur')
         self.sharp_folder = os.path.join(data_dir, 'sharp')
         self.image_files = [f for f in os.listdir(self.blur_folder) if f.endswith('.png')]
-        assert set(os.listdir(self.sharp_folder)) == set(self.image_files), "模糊和清晰图像文件名不匹配"
+        assert set(os.listdir(self.sharp_folder)) == set(self.image_files), "not match"
 
     def __len__(self):
         return len(self.image_files)
